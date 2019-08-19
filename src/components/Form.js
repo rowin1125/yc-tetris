@@ -104,7 +104,6 @@ const FormikHighscore = withFormik({
   validationSchema: Yup.object().shape({
     name: Yup.string()
       .min(3)
-      .max(9)
       .required(),
     city: Yup.string()
       .min(4)
