@@ -52,7 +52,6 @@ const HighscoreForm = ({ values, errors, touched, handleChange, handleBlur, hand
             method="post"
             onSubmit={e => {
               e.preventDefault();
-              console.log(values);
               firebase
                 .firestore()
                 .collection('score')
