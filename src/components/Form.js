@@ -96,8 +96,8 @@ const HighscoreForm = ({ values, errors, touched, handleChange, handleBlur, hand
 const FormikHighscore = withFormik({
   mapPropsToValues({ name, city }) {
     return {
-      name: name || 'rowin',
-      city: city || 'amsterdam'
+      name: name || '',
+      city: city || ''
     };
   },
   validationSchema: Yup.object().shape({

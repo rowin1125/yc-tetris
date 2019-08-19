@@ -1,0 +1,604 @@
+[debug] [2019-08-19T20:38:39.624Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:38:39.626Z] Command:       /Users/rowin/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-08-19T20:38:39.626Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:38:39.626Z] Platform:      darwin
+[debug] [2019-08-19T20:38:39.626Z] Node Version:  v10.16.0
+[debug] [2019-08-19T20:38:39.627Z] Time:          Mon Aug 19 2019 22:38:39 GMT+0200 (Central European Summer Time)
+[debug] [2019-08-19T20:38:39.627Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:38:39.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:38:39.634Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:38:39.634Z] [iam] checking project yctetris for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:38:39.635Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/yctetris:testIamPermissions  
+
+[debug] [2019-08-19T20:38:40.486Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:38:40.490Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/yctetris  
+ 
+[debug] [2019-08-19T20:38:40.737Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'yctetris'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-08-19T20:38:40.746Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris:test  
+
+[debug] [2019-08-19T20:38:40.929Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-08-19T20:38:40.932Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions  
+
+[debug] [2019-08-19T20:38:41.691Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:38:41.691Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:38:41.763Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:38:41 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/yctetris/versions",
+        "path": "/v1beta1/sites/yctetris/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2019-08-19T20:43:26.157Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:43:26.159Z] Command:       /Users/rowin/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-08-19T20:43:26.159Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:43:26.159Z] Platform:      darwin
+[debug] [2019-08-19T20:43:26.159Z] Node Version:  v10.16.0
+[debug] [2019-08-19T20:43:26.160Z] Time:          Mon Aug 19 2019 22:43:26 GMT+0200 (Central European Summer Time)
+[debug] [2019-08-19T20:43:26.160Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:43:26.170Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:43:26.170Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:43:26.170Z] [iam] checking project yctetris for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:43:26.172Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/yctetris:testIamPermissions  
+
+[debug] [2019-08-19T20:43:26.945Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:43:26.948Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/yctetris  
+ 
+[debug] [2019-08-19T20:43:27.191Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'yctetris'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-08-19T20:43:27.201Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris:test  
+
+[debug] [2019-08-19T20:43:28.026Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-08-19T20:43:28.029Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions  
+
+[debug] [2019-08-19T20:43:28.837Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:43:28.837Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:43:28.958Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:43:28 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/yctetris/versions",
+        "path": "/v1beta1/sites/yctetris/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2019-08-19T20:47:00.314Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:47:00.316Z] Command:       /Users/rowin/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-08-19T20:47:00.316Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:47:00.316Z] Platform:      darwin
+[debug] [2019-08-19T20:47:00.316Z] Node Version:  v10.16.0
+[debug] [2019-08-19T20:47:00.317Z] Time:          Mon Aug 19 2019 22:47:00 GMT+0200 (Central European Summer Time)
+[debug] [2019-08-19T20:47:00.318Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:47:00.326Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:47:00.327Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:47:00.327Z] [iam] checking project yctetris for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:47:00.328Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/yctetris:testIamPermissions  
+
+[debug] [2019-08-19T20:47:01.131Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:01.134Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/yctetris  
+ 
+[debug] [2019-08-19T20:47:01.399Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'yctetris'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-08-19T20:47:01.408Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris:test  
+
+[debug] [2019-08-19T20:47:01.603Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-08-19T20:47:01.604Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions  
+
+[debug] [2019-08-19T20:47:03.285Z] <<< HTTP RESPONSE 200
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2019-08-19T20:47:03.290Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris/rulesets  
+
+[debug] [2019-08-19T20:47:03.291Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/yctetris/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2019-08-19T20:47:03.555Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:03.556Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/yctetris/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2019-08-19T20:47:03.789Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully
+[debug] [2019-08-19T20:47:04.194Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:04.195Z] [rules] created ruleset projects/yctetris/rulesets/c80631e5-ce60-4b5e-bce4-73437bdbb451
+[info] i  hosting[yctetris]: beginning deploy...
+[info] i  hosting[yctetris]: found 19 files in build
+[debug] [2019-08-19T20:47:04.204Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2019-08-19T20:47:04.613Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2019-08-19T20:47:04.613Z] [hosting][hash queue][FINAL]
+[debug] [2019-08-19T20:47:04.613Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/da9312fb37d8134b:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:47:05.354Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:47:05.354Z] <<< HTTP RESPONSE BODY
+[debug] [2019-08-19T20:47:05.761Z] [populateQueue] Retrying task index 0
+[debug] [2019-08-19T20:47:05.761Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/da9312fb37d8134b:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:47:06.552Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:47:06.553Z] <<< HTTP RESPONSE BODY
+[debug] [2019-08-19T20:47:07.353Z] [populateQueue] Retrying task index 0
+[debug] [2019-08-19T20:47:07.354Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/da9312fb37d8134b:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:47:08.600Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:08.615Z] [hosting][populate queue][FINAL]
+[debug] [2019-08-19T20:47:08.615Z] [hosting] uploads queued: 19
+[debug] [2019-08-19T20:47:13.423Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[yctetris]: file upload complete
+[debug] [2019-08-19T20:47:13.424Z] [hosting] deploy completed after 9229ms
+[debug] [2019-08-19T20:47:13.506Z] [rules] releasing cloud.firestore with ruleset projects/yctetris/rulesets/c80631e5-ce60-4b5e-bce4-73437bdbb451
+[debug] [2019-08-19T20:47:13.507Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/yctetris/releases/cloud.firestore  
+
+[debug] [2019-08-19T20:47:14.537Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:14.537Z] [rules] updated release projects/yctetris/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore
+[debug] [2019-08-19T20:47:14.538Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "yctetris"
+    },
+    "site": "yctetris",
+    "version": "sites/yctetris/versions/da9312fb37d8134b"
+  }
+]
+[info] i  hosting[yctetris]: finalizing version...
+[debug] [2019-08-19T20:47:14.539Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/da9312fb37d8134b?updateMask=status  
+
+[debug] [2019-08-19T20:47:15.278Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:47:15.278Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:47:15.379Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:47:15 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": "?updateMask=status",
+        "query": "updateMask=status",
+        "pathname": "/v1beta1/sites/yctetris/versions/da9312fb37d8134b",
+        "path": "/v1beta1/sites/yctetris/versions/da9312fb37d8134b?updateMask=status",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/da9312fb37d8134b?updateMask=status"
+      },
+      "method": "PATCH"
+    }
+  }
+}
+[debug] [2019-08-19T20:47:54.433Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:47:54.434Z] Command:       /Users/rowin/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-08-19T20:47:54.435Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:47:54.435Z] Platform:      darwin
+[debug] [2019-08-19T20:47:54.435Z] Node Version:  v10.16.0
+[debug] [2019-08-19T20:47:54.436Z] Time:          Mon Aug 19 2019 22:47:54 GMT+0200 (Central European Summer Time)
+[debug] [2019-08-19T20:47:54.436Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:47:54.442Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:47:54.443Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:47:54.443Z] [iam] checking project yctetris for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:47:54.444Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/yctetris:testIamPermissions  
+
+[debug] [2019-08-19T20:47:55.301Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:55.305Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/yctetris  
+ 
+[debug] [2019-08-19T20:47:55.554Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'yctetris'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-08-19T20:47:55.562Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris:test  
+
+[debug] [2019-08-19T20:47:55.731Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-08-19T20:47:55.733Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions  
+
+[debug] [2019-08-19T20:47:57.138Z] <<< HTTP RESPONSE 200
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2019-08-19T20:47:57.144Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris/rulesets  
+
+[debug] [2019-08-19T20:47:57.144Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/yctetris/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2019-08-19T20:47:57.406Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:57.407Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/yctetris/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2019-08-19T20:47:57.637Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully
+[debug] [2019-08-19T20:47:58.061Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:58.062Z] [rules] created ruleset projects/yctetris/rulesets/69075408-0d39-4a4a-9b23-4dd93173ee62
+[info] i  hosting[yctetris]: beginning deploy...
+[info] i  hosting[yctetris]: found 19 files in build
+[debug] [2019-08-19T20:47:58.079Z] [hosting] hash cache [YnVpbGQ] load error: lines is not defined
+[debug] [2019-08-19T20:47:58.485Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2019-08-19T20:47:58.485Z] [hosting][hash queue][FINAL]
+[debug] [2019-08-19T20:47:58.485Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/ecdf592dec94b6c3:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:47:59.590Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:47:59.591Z] [hosting][populate queue][FINAL]
+[debug] [2019-08-19T20:47:59.591Z] [hosting] uploads queued: 0
+[debug] [2019-08-19T20:47:59.591Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[yctetris]: file upload complete
+[debug] [2019-08-19T20:47:59.592Z] [hosting] deploy completed after 1529ms
+[debug] [2019-08-19T20:47:59.657Z] [rules] releasing cloud.firestore with ruleset projects/yctetris/rulesets/69075408-0d39-4a4a-9b23-4dd93173ee62
+[debug] [2019-08-19T20:47:59.657Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/yctetris/releases/cloud.firestore  
+
+[debug] [2019-08-19T20:48:00.625Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:48:00.625Z] [rules] updated release projects/yctetris/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore
+[debug] [2019-08-19T20:48:00.626Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "yctetris"
+    },
+    "site": "yctetris",
+    "version": "sites/yctetris/versions/ecdf592dec94b6c3"
+  }
+]
+[info] i  hosting[yctetris]: finalizing version...
+[debug] [2019-08-19T20:48:00.627Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/ecdf592dec94b6c3?updateMask=status  
+
+[debug] [2019-08-19T20:48:01.440Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:48:01.441Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:48:01.499Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:48:01 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": "?updateMask=status",
+        "query": "updateMask=status",
+        "pathname": "/v1beta1/sites/yctetris/versions/ecdf592dec94b6c3",
+        "path": "/v1beta1/sites/yctetris/versions/ecdf592dec94b6c3?updateMask=status",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/ecdf592dec94b6c3?updateMask=status"
+      },
+      "method": "PATCH"
+    }
+  }
+}
+[debug] [2019-08-19T20:50:28.461Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:50:28.463Z] Command:       /Users/rowin/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-08-19T20:50:28.463Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:50:28.463Z] Platform:      darwin
+[debug] [2019-08-19T20:50:28.463Z] Node Version:  v10.16.0
+[debug] [2019-08-19T20:50:28.464Z] Time:          Mon Aug 19 2019 22:50:28 GMT+0200 (Central European Summer Time)
+[debug] [2019-08-19T20:50:28.464Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:50:28.471Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:50:28.471Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:50:28.471Z] [iam] checking project yctetris for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:50:28.473Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/yctetris:testIamPermissions  
+
+[debug] [2019-08-19T20:50:29.315Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:50:29.319Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/yctetris  
+ 
+[debug] [2019-08-19T20:50:29.524Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'yctetris'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-08-19T20:50:29.534Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris:test  
+
+[debug] [2019-08-19T20:50:30.332Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-08-19T20:50:30.336Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions  
+
+[debug] [2019-08-19T20:50:31.663Z] <<< HTTP RESPONSE 200
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2019-08-19T20:50:31.669Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/yctetris/rulesets  
+
+[debug] [2019-08-19T20:50:31.669Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/yctetris/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2019-08-19T20:50:31.934Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:50:31.936Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/yctetris/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2019-08-19T20:50:32.171Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully
+[debug] [2019-08-19T20:50:32.585Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:50:32.585Z] [rules] created ruleset projects/yctetris/rulesets/f9a58fff-1703-4683-baae-1c25cbdab0df
+[info] i  hosting[yctetris]: beginning deploy...
+[info] i  hosting[yctetris]: found 19 files in build
+[debug] [2019-08-19T20:50:32.603Z] [hosting] hash cache [YnVpbGQ] load error: lines is not defined
+[debug] [2019-08-19T20:50:33.007Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2019-08-19T20:50:33.007Z] [hosting][hash queue][FINAL]
+[debug] [2019-08-19T20:50:33.007Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/d55ab6553032368c:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:50:33.814Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:50:33.814Z] <<< HTTP RESPONSE BODY
+[debug] [2019-08-19T20:50:34.219Z] [populateQueue] Retrying task index 0
+[debug] [2019-08-19T20:50:34.220Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/d55ab6553032368c:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:50:34.962Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:50:34.962Z] <<< HTTP RESPONSE BODY
+[debug] [2019-08-19T20:50:35.764Z] [populateQueue] Retrying task index 0
+[debug] [2019-08-19T20:50:35.765Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/d55ab6553032368c:populateFiles  
+ <request body omitted>
+[debug] [2019-08-19T20:50:37.296Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:50:37.297Z] [hosting][populate queue][FINAL]
+[debug] [2019-08-19T20:50:37.297Z] [hosting] uploads queued: 0
+[debug] [2019-08-19T20:50:37.297Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[yctetris]: file upload complete
+[debug] [2019-08-19T20:50:37.298Z] [hosting] deploy completed after 4712ms
+[debug] [2019-08-19T20:50:37.367Z] [rules] releasing cloud.firestore with ruleset projects/yctetris/rulesets/f9a58fff-1703-4683-baae-1c25cbdab0df
+[debug] [2019-08-19T20:50:37.368Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/yctetris/releases/cloud.firestore  
+
+[debug] [2019-08-19T20:50:38.321Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:50:38.322Z] [rules] updated release projects/yctetris/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore
+[debug] [2019-08-19T20:50:38.322Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "yctetris"
+    },
+    "site": "yctetris",
+    "version": "sites/yctetris/versions/d55ab6553032368c"
+  }
+]
+[info] i  hosting[yctetris]: finalizing version...
+[debug] [2019-08-19T20:50:38.324Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/versions/d55ab6553032368c?updateMask=status  
+
+[debug] [2019-08-19T20:50:39.308Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:50:39.308Z] [hosting] finalized version for yctetris:
+[info] ✔  hosting[yctetris]: version finalized
+[info] i  hosting[yctetris]: releasing new version...
+[debug] [2019-08-19T20:50:39.309Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/releases?version_name=sites/yctetris/versions/d55ab6553032368c  
+
+[debug] [2019-08-19T20:50:40.163Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:50:40.163Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:50:40.212Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:50:39 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": "?version_name=sites/yctetris/versions/d55ab6553032368c",
+        "query": "version_name=sites/yctetris/versions/d55ab6553032368c",
+        "pathname": "/v1beta1/sites/yctetris/releases",
+        "path": "/v1beta1/sites/yctetris/releases?version_name=sites/yctetris/versions/d55ab6553032368c",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/yctetris/releases?version_name=sites/yctetris/versions/d55ab6553032368c"
+      },
+      "method": "POST"
+    }
+  }
+}
