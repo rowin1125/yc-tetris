@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Tetris from './components/Tetris';
+import mobile from 'is-mobile';
+import { StyledMobile } from './components/styles/StyledMobile';
+import { Cat } from 'react-kawaii';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () =>
+  mobile() ? (
+    <StyledMobile>
+      <aside>
+        <h1>
+          This app is not made for mobile{' '}
+          <span role="img" aria-label="phone">
+            📵
+          </span>
+        </h1>
+        <h2>
+          Please use a desktop{' '}
+          <span role="img" aria-label="computer">
+            💻
+          </span>
+        </h2>
+        <Cat size={320} mood="sad" color="#f77f00" />
+      </aside>
+    </StyledMobile>
+  ) : (
+    <div className="app">
+      <Tetris />
     </div>
   );
-}
 
 export default App;
