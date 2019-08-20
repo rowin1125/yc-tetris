@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHighscore = styled.div`
+  position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -21,17 +22,36 @@ export const StyledHighscore = styled.div`
     list-style-position: inside;
     margin: 0;
     padding: 0;
+    width: 100%;
 
     li {
       padding-bottom: 8px;
       padding-right: 8px;
+      position: relative;
 
-      &:before {
-        content: '';
-        color: red;
-        display: inline-block;
-        margin-left: -1em;
-        margin-right: 1em;
+      &:after {
+        position: absolute;
+        top: -5px;
+        right: 20px;
+        margin-left: 1em;
+      }
+
+      &:first-of-type {
+        &:after {
+          content: '🥇';
+        }
+      }
+
+      &:nth-of-type(2) {
+        &:after {
+          content: '🥈';
+        }
+      }
+
+      &:nth-of-type(3) {
+        &:after {
+          content: '🥉';
+        }
       }
     }
   }

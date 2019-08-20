@@ -5,6 +5,8 @@ import Display from './Display';
 import StartButton from './StartButton';
 import Highscore from './Highscore';
 import Modal from './Modal';
+import Legend from './Legend';
+import Logo from './Logo';
 import { createStage, checkCollision } from '../gameHelpers';
 
 import { usePlayer } from '../hooks/usePlayer';
@@ -13,11 +15,14 @@ import { useInterval } from '../hooks/useInterval';
 import { useGameStatus } from '../hooks/useGameStatus';
 
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris';
+import { StyledLegend } from './styles/StyledLegend';
+import { StyledLogo } from './styles/StyledLogo';
 
 const Tetris = ({ db }) => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showHelp, setShowHelp] = useState(true);
 
   const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
   const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
@@ -39,14 +44,15 @@ const Tetris = ({ db }) => {
     setScore(0);
     setRows(0);
     setLevel(0);
+    setShowHelp(false);
   };
 
   const drop = () => {
     // Increase level when player has cleared 10 rows
-    if (rows > (level + 1) * 10) {
+    if (rows > (level + 1) * 5) {
       setLevel(prev => prev + 1);
       // increase speed
-      setDropTime(700 / (level + 1) + 200);
+      setDropTime(700 / (level + 1) + 125);
     }
     if (!checkCollision(player, stage, { x: 0, y: 1 })) {
       updatePlayerPos({ x: 0, y: 1, collided: false });
@@ -57,6 +63,7 @@ const Tetris = ({ db }) => {
         setOpen(true);
         setGameOver(true);
         setDropTime(null);
+        setShowHelp(true);
       }
       updatePlayerPos({ x: 0, y: 0, collided: true });
     }
@@ -64,7 +71,7 @@ const Tetris = ({ db }) => {
   const keyUp = ({ keyCode }) => {
     if (!gameOver) {
       if (keyCode === 40) {
-        setDropTime(700 / (level + 1) + 200);
+        setDropTime(700 / (level + 1) + 125);
       }
     }
   };
@@ -94,6 +101,18 @@ const Tetris = ({ db }) => {
 
   return (
     <StyledTetrisWrapper role="button" tabIndex="0" onKeyDown={e => move(e)} onKeyUp={keyUp}>
+      <h3>
+        Made by <span style={{ color: '#f77f00' }}>Rowin Mol </span>of <span style={{ color: '#f77f00' }}>YC Hoofddorp</span>
+      </h3>
+      {showHelp && (
+        <StyledLegend>
+          <Legend showHelp={showHelp} />
+        </StyledLegend>
+      )}
+      <StyledLogo>
+        <Logo />
+      </StyledLogo>
+
       <StyledTetris>
         <Stage stage={stage} />
         <aside>
