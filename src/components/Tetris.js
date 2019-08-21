@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import Stage from './Stage';
 import Display from './Display';
@@ -34,6 +34,7 @@ const Tetris = ({ mobile }) => {
       updatePlayerPos({ x: dir, y: 0 });
     }
   };
+  const elem = useRef(null);
 
   const startGame = () => {
     // reset everything
@@ -45,6 +46,7 @@ const Tetris = ({ mobile }) => {
     setRows(0);
     setLevel(0);
     setShowHelp(false);
+    elem.current.focus();
   };
 
   const drop = () => {
@@ -100,7 +102,7 @@ const Tetris = ({ mobile }) => {
   }, dropTime);
 
   return (
-    <StyledTetrisWrapper role="button" tabIndex="0" onKeyDown={e => move(e)} onKeyUp={keyUp}>
+    <StyledTetrisWrapper ref={elem} role="button" tabIndex="0" onKeyDown={e => move(e)} onKeyUp={keyUp}>
       <h3>
         Made by <span style={{ color: '#f77f00' }}>Rowin Mol </span>of <span style={{ color: '#f77f00' }}>YC Hoofddorp</span>
       </h3>
@@ -114,7 +116,7 @@ const Tetris = ({ mobile }) => {
       </StyledLogo>
 
       <StyledTetris>
-        <Stage id="field" stage={stage} />
+        <Stage elem={elem} stage={stage} />
         <aside>
           {gameOver ? (
             <>
