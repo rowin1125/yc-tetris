@@ -113,8 +113,8 @@ const Tetris = ({ mobile }) => {
         <Logo />
       </StyledLogo>
 
-      <StyledTetris className="rowin">
-        <Stage stage={stage} />
+      <StyledTetris>
+        <Stage id="field" stage={stage} />
         <aside>
           {gameOver ? (
             <>
