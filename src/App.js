@@ -25,7 +25,7 @@ const App = () =>
     </StyledMobile>
   ) : (
     <div className="app">
-      <Tetris />
+      <Tetris mobile={mobile()} />
     </div>
   );
 

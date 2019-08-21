@@ -8,7 +8,7 @@ const Legend = () => {
         <li>← = Move Left</li>
         <li>↑ = Rotate</li>
         <li>→ = Move right</li>
-        <li>↓ = Move down faster</li>
+        <li>↓ = Move down</li>
       </ol>
     </>
   );

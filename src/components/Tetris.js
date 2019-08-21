@@ -18,7 +18,7 @@ import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris';
 import { StyledLegend } from './styles/StyledLegend';
 import { StyledLogo } from './styles/StyledLogo';
 
-const Tetris = ({ db }) => {
+const Tetris = ({ mobile }) => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [open, setOpen] = useState(false);
@@ -113,7 +113,7 @@ const Tetris = ({ db }) => {
         <Logo />
       </StyledLogo>
 
-      <StyledTetris>
+      <StyledTetris className="rowin">
         <Stage stage={stage} />
         <aside>
           {gameOver ? (
