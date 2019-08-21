@@ -32,7 +32,7 @@ export const StyledHighscore = styled.div`
       &:after {
         position: absolute;
         top: -5px;
-        right: 20px;
+        right: -10px;
         margin-left: 1em;
       }
 
